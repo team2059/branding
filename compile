@@ -1,10 +1,4 @@
 #!/bin/sh
 
-git branch -d web-compiled
-git checkout -b web-compiled
-mkdir css
+mkdir -p css
 lessc ./less/style.less > ./css/style.css
-git rm --cached -rf .
-git add fonts
-git add css
-git status
